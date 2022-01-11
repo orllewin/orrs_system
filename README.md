@@ -17,14 +17,19 @@ orrs.live is currently using Azuracast but scheduling is unfortunately broken an
 
 ## LiquidSoap
 
-The following command will interrupt AzuraCast's General Rotation, it won't close on completion, but moving this to a file instead of a one-liner should make that easier (there are on complete callbacks or similar, eg: `on_stop=shutdown`)
+The following .liq file will play a file or playlist once then temrinate, returning orrs.live to play from the General Rotation AutoDJ
 
 ```
-liquidsoap \
-  'output.icecast(%vorbis,
-     host = "orrs.live", 
-     port = 8005,
-     password = "azuracastemail,azuracastpassword", 
-     mount = "/",
-     mksafe(playlist("p.m3u")))'
+#!/usr/bin/liquidsoap
+
+track = once(single("test.mp3"))
+
+output.icecast(%vorbis,
+  host = "orrs.live", 
+  port = 8000,
+  password = "REDACTED", 
+  mount = "/",
+  on_stop = shutdown,
+  fallible = true,
+  track)
 ```
