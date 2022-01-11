@@ -8,7 +8,7 @@ orrs.live is currently using Azuracast but scheduling is unfortunately broken an
 
 * [Icecast](https://icecast.org/)
 * [Liquid Soap](https://www.liquidsoap.info/) 
-* [Krontab](https://insanusmokrassar.github.io/krontab/) or cron.d
+* [Krontab](https://insanusmokrassar.github.io/krontab/) or [cron.d](https://help.ubuntu.com/community/CronHowto)
 
 ## LiquidSoap
 
