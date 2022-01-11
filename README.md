@@ -2,7 +2,7 @@
 
 Server software to power the [https://orrs.live](orrs.live/) netradio station. 
 
-orrs.live is currenlt using Azuracast but scheduling is unfortunately broken and the developers are having trouble replicating the issues several users are reporting. ORRS System is an attempt to roll my own radio scheduler. 
+orrs.live is currently using Azuracast but scheduling is unfortunately broken and the developers are having trouble replicating the issues several users are reporting. ORRS System is an attempt to roll my own radio scheduler. 
 
 ## Requirements
 
