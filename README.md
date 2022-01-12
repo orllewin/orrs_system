@@ -1,8 +1,8 @@
 # ORRS System
 
-Server software to power the [https://orrs.live](orrs.live/) netradio station. 
+Server software to power scheduled shows on the [https://orrs.live](orrs.live/) netradio station. 
 
-orrs.live is currently using Azuracast but scheduling is unfortunately broken and the developers are having trouble replicating the issues several users are reporting. ORRS System is an attempt to roll my own radio scheduler that will interrupt AzuraCasts General Rotation AutoDJ. 
+orrs.live is currently using AzuraCast but scheduling is unfortunately broken and the developers are having trouble replicating the issues several users are reporting. ORRS System is an attempt to roll my own radio scheduler that will interrupt AzuraCasts General Rotation AutoDJ. 
 
 I was initially going to do this purely with bash + cron but I've decided life is too short to do this in bash so it's a Kotlin/JVM command-line tool + cron.
 
