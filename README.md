@@ -1,10 +1,38 @@
-# ORRS System
+# ORRS System - Under Construction
 
 Server software to power scheduled shows on the [https://orrs.live](orrs.live/) netradio station. 
 
 orrs.live is built with AzuraCast but scheduling is unfortunately broken and the developers are having trouble replicating the issues several users are reporting. ORRS System is an attempt to roll my own radio scheduler that will interrupt AzuraCasts General Rotation AutoDJ. 
 
 I was initially going to do this purely with bash + cron but I've decided life is too short to do this in bash so it's a Kotlin/JVM command-line tool + cron.
+
+## Usage
+
+On first run enter your Icecast DJ mount parameters: 
+```
+orrs_system
+```
+
+Update parameters at any time: 
+```
+orrs_system -host orrs.live -port 8005 -password Hello123 -mount /mountPoint
+```
+
+Schedule item with named parameters:
+```
+orrs_system -timestamp 20220112_1800 -file show.mp3
+```
+
+Schedule with anonymous parameters:
+```
+orrs_system 20220112_1800 show.mp3
+```
+
+or
+
+```
+orrs_system show.mp3 20220112_1800
+```
 
 ## Tools
 
