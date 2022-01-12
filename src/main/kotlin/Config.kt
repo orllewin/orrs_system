@@ -2,6 +2,7 @@ import java.io.File
 import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Paths
+import kotlin.system.exitProcess
 
 class Config {
 
@@ -13,7 +14,6 @@ class Config {
     }
 
     init {
-       // Files.delete(Paths.get(CONFIG_PATH))
         when {
             configExists() -> load()
             else -> {
@@ -24,6 +24,12 @@ class Config {
                 }
             }
         }
+    }
+
+    fun reset(){
+        println("Deleting config, rerun to start again")
+        Files.delete(Paths.get(CONFIG_PATH))
+        exitProcess(0)
     }
 
 
@@ -80,10 +86,10 @@ class Config {
     }
 
     private fun load(){
-        println("Config:")
+        //println("Config:")
         Files.lines(Paths.get(CONFIG_PATH)).forEach { line ->
             lines.add(line)
-            println(line)
+            //println(line)
         }
     }
 
