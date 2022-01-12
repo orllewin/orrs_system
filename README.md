@@ -14,7 +14,7 @@ I was initially going to do this purely with bash + cron but I've decided life i
 
 ## LiquidSoap
 
-The following .liq file will play a file or playlist once then temrinate, returning orrs.live to play from the General Rotation AutoDJ
+The following .liq file will play a file or playlist once then terminate, returning orrs.live to play from the General Rotation AutoDJ
 
 ```
 #!/usr/bin/liquidsoap
