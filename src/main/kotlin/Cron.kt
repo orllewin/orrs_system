@@ -9,14 +9,18 @@ class Cron {
     companion object{
         private const val CROND_DIRECTORY = "~/etc/cron.d/orrs/"
 
-        fun logCronDirectory(){
-            val cronDFiles = File(CROND_DIRECTORY).listFiles()
-            cronDFiles.forEach { cronDFile ->
-                println(">>>>>>> ${cronDFile.name}")
-                val content = String(Files.readAllBytes(Paths.get(cronDFile.toURI())))
-                println(">>>>>>>>>>>>>> $content")
-            }
+
+    }
+
+    fun logCronDirectory(){
+        val cronDFiles = File(CROND_DIRECTORY).listFiles()
+        cronDFiles.forEach { cronDFile ->
+            println(">>>>>>> ${cronDFile.name}")
+            val content = String(Files.readAllBytes(Paths.get(cronDFile.toURI())))
+            println(">>>>>>>>>>>>>> $content")
         }
+
+        exitProcess(0)
     }
 
     fun deleteAll(){

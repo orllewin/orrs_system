@@ -13,6 +13,7 @@ class Orrs(private val config: Config) {
             }
             args.size == 1 && args.first().startsWith("--") -> {
                 if(args.first().lowercase() == "--deleteallcron") Cron().deleteAll()//Exits
+                if(args.first().lowercase() == "--logcron") Cron().logCronDirectory()//Exits
             }
             args.size == 2 && !args.first().startsWith("-") -> {
                 //Assume [mp3, timestamp] or [timestamp, mp3]
