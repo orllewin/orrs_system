@@ -195,4 +195,9 @@ class Config {
         }
         return hasHost && hasPort && hasPassword && hasMount
     }
+
+    fun host(): String = "${field("host")}"
+    fun port(): String = "${field("port")}"
+    fun password(): String = "${field("password")}"
+    fun mount(): String = "${field("mount")}"
 }

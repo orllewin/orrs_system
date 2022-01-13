@@ -34,11 +34,37 @@ or
 orrs_system show.mp3 20220112_1800
 ```
 
+## Scheduling Syntax
+
+### Single
+
+A single scheduled show with no repeat rules `yyyymmdd_hhmm`:
+
+```
+20220113_1800
+```
+
+### Weekly
+
+Once a week, specify day and time `ddd_hhmm`:
+
+```
+mon_2200
+```
+
+### Daily
+
+Every day at a set time `hhmm`:
+
+```
+1300
+```
+
 ## Tools
 
 * [Icecast](https://icecast.org/)
 * [Liquid Soap](https://www.liquidsoap.info/) 
-* [Krontab](https://insanusmokrassar.github.io/krontab/) or [cron.d](https://help.ubuntu.com/community/CronHowto) and [at](https://en.wikipedia.org/wiki/At_(command))
+* [cron.d](https://help.ubuntu.com/community/CronHowto) and [at](https://en.wikipedia.org/wiki/At_(command))
 
 ## LiquidSoap
 
